@@ -26,7 +26,7 @@ You will need to make this template your own. To help, here is a list of the maj
 8. Replace and/or remove the Logo in the navbar
 9. Update the Copyright in the footer with your name and date
 
-Of course, there is a whole lot more you can do. I cannot go through each of the pages or every possible option available. You will have to explore on your own.  
+Of course, there is a whole lot more you can do. I cannot go through every possible option available. You will have to explore on your own.  
 
 ## Bugs and Issues
 
@@ -35,7 +35,7 @@ Have a bug or an issue with this template? [Open a new issue](https://github.com
 ## Changelog
 
 ### 1.0
-* Released: June 5, 2018
+* Released: August 13, 2018
 
 Initial release
 
