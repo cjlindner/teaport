@@ -4,7 +4,7 @@ Tea Port is the template used for my Professional Portfolio. It is a Bootstrap p
 
 ## Preview
 
-[![Tea Port Preview](https://www.cjlindner.com/img/screenshot.jpg)]
+![Tea Port Preview](https://www.cjlindner.com/img/screenshot.jpg)
 
 **[Live Preview](https://www.cjlindner.com)**
 
