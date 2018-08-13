@@ -1,0 +1,776 @@
+@charset "UTF-8";
+/*
+ * Default Portfolio CSS Theme
+ * Copyright 2013-2018 Carl Lindner
+ * Licensed under MIT
+*/
+
+/*
+--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+--------------------------------------------------------------
+
+* GENERAL STYLEs
+	- Basic Styles
+	- Horizontal Rules
+	- Backgrounds
+	- Buttons
+	- Spacers
+
+* NAVBAR STYLEs
+	- Default Style
+	- Scaling for Large Screens
+	- Branding Logo
+	- Animated Menu
+
+* HEADER STYLES
+	- Header Style
+	- Profile Picture
+
+* SECTION ELEMENTS
+	- Headings
+	- Body
+	- Icons
+	- Shadows
+
+* FOOTER STYLES
+	- Social Footer
+
+* ANIMATED SECTION ELEMENTS
+	- Skill Bar
+	- Quote Carousel 
+
+* ANIMATIONS
+	- fadeIn
+	- fadeInUp
+	- fadeInDown
+	- fadeInLeft
+	- fadeInRight
+	- slideInUp
+	- slideInDown
+	- slideInLeft
+	- slideInRight
+	- zoomIn
+  
+* ADDITIONAL STYLES
+	- Preloader (comming soon!)
+*/
+
+
+/* === GENERAL STYLES === */
+
+/* --- Basic Styles --- */
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+	-webkit-transition: all 0.35s;
+	-moz-transition: all 0.35s;
+	transition: all 0.35s;
+}
+.text-light-faded {
+	color: rgba(250, 235, 229, 0.7);
+}
+a.text-light-faded:hover, 
+a.text-light-faded:focus {
+	color: rgba(247, 222, 212, 0.7);
+}
+
+/* Horizontal Rules */
+hr.long {
+	max-width: 300px;
+}
+hr.short {
+	max-width: 150px;
+}
+hr.fat {
+	border-width: 3px;
+}
+hr.primary {
+	border-color: rgba(47, 48, 66, 1);
+}
+hr.secondary {
+	border-color: rgba(186, 195, 200, 1);
+}
+hr.white {
+	border-color: #FFFFFF;
+}
+hr.light {
+	border-color: rgba(250, 235, 229, 1);
+}
+hr.primary-faded {
+	border-color: rgba(47, 48, 66, 0.6);
+}
+hr.secondary-faded {
+	border-color: rgba(186, 196, 200, 0.6);
+}
+hr.light-faded {
+	border-color: rgba(250, 235, 229, 0.6);
+}
+
+
+/* --- Backgrounds --- */
+.bg-primary {
+	border-top: 1px rgba(47, 48, 66, 1);
+    border-bottom: 1px rgba(47, 48, 66, 1);
+}
+.bg-secondary {
+	border-top: 1px solid rgba(186, 195, 200, 1);
+    border-bottom: 1px solid rgba(186, 195, 200, 1);
+}
+.bg-light {
+	border-top: 1px solid rgba(250, 235, 229, 1);
+    border-bottom: 1px solid rgba(250, 235, 229, 1);
+}
+.bg-light-grey {
+    background-color: #fafafa;
+    border-top: 1px solid #f3f3f3;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+
+/* --- Buttons --- */
+.btn-circle {
+	width: 30px;
+	height: 30px;
+	padding: 3px 3px;
+	text-align: center;
+	font-size: 1rem;
+	border-radius: 15px;
+}
+.btn-circle-lg {
+	width: 50px;
+	height: 50px;
+	padding: 10px 10px;
+	text-align: center;
+	font-size: 1.25rem;
+	border-radius: 25px;
+}
+.btn-circle-xl {
+	width: 70px;
+	height: 70px;
+	padding: 18px 18px;
+	text-align: center;
+	font-size: 1.5rem;
+	border-radius: 35px;
+}
+
+/* --- Spacers --- */
+.spacer-1 {
+    width: 100%;
+    height: 1rem;
+}
+.spacer-15 {
+    width: 100%;
+    height: 1.5rem;
+}
+.spacer-2 {
+    width: 100%;
+    height: 2rem;
+}
+.spacer-3 {
+	width: 100%;
+	height: 3rem;
+}
+
+
+/* === NAVIGATION STYLES === */
+
+/* --- Menu Bar Defaults --- */
+#main_nav {
+	background: linear-gradient(rgba(48, 70, 106, 1), rgba(47, 48, 66, 1) 60%, rgba(46, 38, 46, 1));
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* --- Menu Bar Scaling for Large Screens --- */
+@media (min-width: 992px) {
+	#main_nav {
+		background: linear-gradient(rgba(52, 58, 64, 1), rgba(52, 58, 64, 0.6), rgba(52, 58, 64, 0.3), rgba(52, 58, 64, 0.1), rgba(52, 58, 64, 0));
+    	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	}
+	/* Menu Bar Styles after Cover Image */
+	#main_nav.navbar-affix {
+		background: linear-gradient(rgba(48, 70, 106, 0.9), rgba(47, 48, 66, 0.9) 60%, rgba(46, 38, 46, 0.9));
+	}
+}
+
+/* --- Branding Logo Default --- */
+.navbar-brand {
+	/* padding added to match navbar-troggler */
+	padding: 0.25rem 0.75rem;
+}
+.navbar-brand .logo {
+	height: 35px;
+	width: 35px;
+	background: url(../img/logo_white.svg) no-repeat center center;
+	background-size: 100% auto;
+}
+.navbar-brand .logo:hover,
+.navbar-brand .logo:focus {
+	background-image: url(../img/logo_grey.svg);
+	background-size: 100% auto;
+}
+
+/* --- Menu Button Defaults --- */
+.navbar-dark .navbar-toggler {
+  border-color: transparent;
+}
+
+.navbar-toggler .icon-bar {
+	display: block;
+	width: 22px;
+	height: 2px;
+	border-radius: 1px;
+}
+.navbar-toggler .icon-bar + .icon-bar {
+	margin-top: 4px;
+}
+
+/* --- Animated Menu Button Collapsed --- */
+.icon-bar {
+	width: 22px;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.navbar-toggler.collapsed .top-bar {
+	-webkit-transform: rotate(0);
+	-ms-transform: rotate(0);
+	transform: rotate(0);
+}
+.navbar-toggler.collapsed .middle-bar {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+.navbar-toggler.collapsed .bottom-bar {
+	-webkit-transform: rotate(0);
+	-ms-transform: rotate(0);
+	transform: rotate(0);
+}
+
+/* --- Animated Menu Button Active --- */
+.top-bar {
+	-webkit-transform: rotateZ(45deg);
+	-ms-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
+	-webkit-transform-origin: 10% 10%;
+	-ms-transform-origin: 10% 10%;
+	transform-origin: 10% 10%;
+}
+.middle-bar {
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.bottom-bar {
+	-webkit-transform: rotateZ(-45deg);
+	-ms-transform: rotateZ(-45deg);
+	transform: rotateZ(-45deg);
+	-webkit-transform-origin: 10% 90%;
+	-ms-transform-origin: 10% 90%;
+	transform-origin: 10% 90%;
+}
+
+
+/* === HEADER STYLE === */
+header { 
+    background-image: url(../img/header_background.jpg);
+	min-height: 610px;
+}
+.jumbotron {
+	margin-bottom: 0;
+}
+.profile-header {
+	text-align: center;
+
+}
+#profile-picture {
+	max-width: 60%;
+	height: auto;
+	margin: 0.5rem;
+	line-height: 1.42857143;
+	border-radius: 50%;
+}
+#profile-headline {
+	margin: 0.5rem;
+}
+#profile-name {
+	font-family: 'Merriweather', serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0.5rem;
+}
+#profile-subtitle{
+	font-family: 'Tillana', cursive;
+	margin: 0.5rem;
+}
+
+/* Header Scaling for Small Screens */
+@media (min-width: 576px) {
+	#profile-headline {
+		font-size: 1.5rem;
+	}
+	#profile-name {
+		font-size: 3rem;
+	}
+	#profile-subtitle{
+		font-size: 2rem;
+	}
+}
+
+/* Header Scaling for Medium Screens */
+@media screen and (min-width: 768px) {
+	#profile-picture {
+		max-width: 75%;
+	}
+	#profile-headline {
+		font-size: 2rem;
+	}
+	#profile-name {
+		font-size: 4rem;
+	}
+	#profile-subtitle{
+		font-size: 2.5em;
+	}
+}
+
+/* Header Scaling for Large Screens */
+@media screen and (min-width: 992px) {
+	#profile-picture {
+		max-width: 100%;
+	}
+}
+
+
+/* === SECTION ELEMENTS === */
+
+/* --- Section Styles --- */
+.section-body {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+#intro {
+	text-align: center;
+}
+.section-heading-light {
+	font-family: 'Merriweather', serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: rgba(250, 235, 229, 1);
+}
+.section-heading-dark {
+	font-family: 'Merriweather', serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: rgba(47, 48, 66, 1);
+}
+.section-graphic {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+/* Section Scaling for Medium Screens and up */
+@media screen and (min-width: 768px) {
+	.section-heading-dark {
+		font-size: 3rem;
+	}
+	.section-heading-light {
+		font-size: 3rem;
+	}
+	#intro {
+		text-align: left;
+	}
+}
+
+/* --- Icon Styles --- */
+.icon-primary {
+	color: rgba(47, 48, 66, 1);
+}
+.icon-light {
+	color: rgba(250, 235, 229, 1);
+}
+.icon-secondary {
+	color: rgba(186, 195, 200, 1);
+}
+.icon-info {
+	color: rgba(119, 141, 169, 1);
+}
+.tools-container
+{
+	text-align: center;
+}
+.tool-icon {
+	display: inline-flex;
+	margin: 0.5rem;
+	color: rgba(47, 48, 66, 1);
+}
+
+/* --- Shadow Styles --- */
+.shadowbox {
+	border: 1px solid #F1F1F1;
+	background-color: #FFFFFF;
+	margin-bottom: 30px;
+	text-align: center;
+	box-sizing: border-box;
+	box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2), 0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.2);
+}
+#section-spacer {
+	background-image: url(../img/spacer_background.jpg);
+	min-height: 300px;
+}
+.contact-content {
+	padding: 20px 0px;
+}
+.text-shadow {
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+.object-shadow {
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* === FOOTER STYLES === */
+
+/* --- Social Footer --- */
+.social-list {
+	list-style: none;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-left: 0;
+}
+.social-link {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+}
+.social-icon {
+	color: rgba(250, 235, 229, 1);
+}
+.social-icon:hover {
+	color: rgba(186, 195, 200, 1); 
+}
+.social-icon:focus,
+.social-icon.focus {
+	color: rgba(186, 195, 200, 1);
+}
+.social-icon:disabled,
+.social-icon.disabled {
+	color: rgba(186, 195, 200, 1);
+}
+
+/* === Animated Section Elements === */
+
+/* --- Parallax Effect --- */
+.parallax {	
+	height: 100%; 
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+    background-size: cover;
+}
+@media screen and (max-width: 1024px) {
+	.parallax {
+		background-attachment: scroll;
+	}
+}
+.non-parallax {
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+    background-size: cover;
+}
+/* --- Animated Skill Bar --- */
+/* --- Requires portfolio.js to function --- */
+.skillbar {
+	position:relative;
+	display:block;
+	margin-bottom:30px;
+	width:100%;
+	height:5px;
+	-webkit-transition:0.4s linear;
+	-moz-transition:0.4s linear;
+	-ms-transition:0.4s linear;
+	-o-transition:0.4s linear;
+	transition:0.4s linear;
+}
+.skillbar-bar {
+	height:5px;
+	width:0px;
+	background: rgba(186, 195, 200, 1);
+	-webkit-transition-property:width, background-color;
+	-moz-transition-property:width, background-color;
+	-ms-transition-property:width, background-color;
+	-o-transition-property:width, background-color;
+	transition-property:width, background-color;
+}
+.skillbar-title {
+    display: inline-block;
+}
+.skillbar-title, .skill-bar-percent {
+    color: rgba(47, 48, 66, 1);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.skill-bar-percent {
+    float: right;
+    display: inline-block;
+}
+
+/* --- Quote Carousel --- */
+#quotes {
+	background-image: url(../img/quote_background.jpg);
+}
+.carousel-inner {
+	height: 225px;
+}
+.quote-portrait {
+	width: 6rem;
+	height: 6rem;
+	box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4), 6px 6px 12px 0 rgba(0, 0, 0, 0.4);
+}
+.quote-caption {
+	text-align: center;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+	color: rgba(250, 235, 229, 1);	
+}
+
+/* --- Quote Carousel Scaling for Small Screens --- */
+@media (min-width: 576px) {
+	.carousel-inner {
+		height: 180px;
+	}
+}
+@media (min-width: 768px) {
+	.quote-caption {
+		margin-left: 1rem;
+		padding: 0.5rem;
+		text-align: left;
+		border-left: 5px solid rgba(47, 48, 66, 1);
+	}
+}
+
+/* --- Animated Project Tiles --- */
+.project-tile {
+	position: relative;
+    overflow: hidden;
+    display: block;
+}
+.project-overlay {
+	background: rgba(0, 0, 0, 0.6);
+	/* background: none repeat scroll 0 0 rgba(0, 0, 0, 0.7); */
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	overflow: hidden;
+	transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+}
+.overlay-caption {
+	position: absolute;
+	display: block;
+	top: 125%;
+	opacity: 0;
+	width: 100%;
+	text-align: center;
+	color: rgba(255, 255, 255, 1);
+	transition: all 0.5s ease-in-out 0s;
+	-moz-transition: all 0.5s ease-in-out 0s;
+	-webkit-transition: all 0.5s ease-in-out 0s;
+	-o-transition: all 0.5s ease-in-out 0s;
+}
+.project-tile:hover .project-overlay {
+	opacity: 1;
+	visibility: visible;
+}
+.project-tile:hover .project-overlay .overlay-caption {
+	top: 50%;
+	opacity: 1;
+}
+
+/* --- Animated Project Scaling for Small Screens --- */
+@media (max-width: 576px) {
+	.project-overlay {
+		opacity: 0.65;
+		visibility: visible;
+	}
+	.overlay-caption {
+		top: 50%;
+		opacity: 1;
+	}
+}
+@media (min-width: 768px) {
+	.project-tile:hover .project-img {
+		transform: scale(1.1);
+		transition: all 2s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+		width: 100%;
+	}
+}
+
+/* === Animations and Transitions === */
+/*
+ * Modified from animate.css - http://daneden.me/animate
+ * Originally Authored by Daniel Eden
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ * Version - 3.5.2
+*/
+
+.animated {
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+/* --- Animation Delay ---*/
+.animated-delay {
+	-webkit-animation-delay: 0.5s;
+	-moz-animation-delay: 0.5s;
+	-o-animation-delay: 0.5s;
+	animation-delay: 0.5s;
+}
+.animated-delay-long {
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-o-animation-delay: 1s;
+	animation-delay: 1s;
+}
+
+/* --- Fade In Transitions --- */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+    	opacity: 1;
+	}
+}
+.fadeIn {
+	animation-name: fadeIn;
+}
+
+.fadeInUp {
+	animation-name: fadeInUp;
+}
+@keyframes fadeInUp {
+	from {
+    	opacity: 0;
+    	transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeInDown {
+	animation-name: fadeInDown;
+}
+@keyframes fadeInDown {
+	from {
+    	opacity: 0;
+    	transform: translate3d(0, -100%, 0);
+  	}
+	to {
+    	opacity: 1;
+    	transform: none;
+	}
+}
+.fadeInLeft {
+	animation-name: fadeInLeft;
+}
+@keyframes fadeInLeft {
+	from {
+    	opacity: 0;
+    	transform: translate3d(-100%, 0, 0);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+  	}
+}
+.fadeInRight {
+	animation-name: fadeInRight;
+}
+@keyframes fadeInRight {
+	from {
+    	opacity: 0;
+    	transform: translate3d(100%, 0, 0);
+	}
+	to {
+    	opacity: 1;
+    	transform: none;
+	}
+}
+
+/* --- Slide In Transitions --- */
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.slideInUp {
+  animation-name: slideInUp;
+}
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.slideInDown {
+  animation-name: slideInDown;
+}
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.slideInLeft {
+  animation-name: slideInLeft;
+}
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.slideInRight {
+  animation-name: slideInRight;
+}
+
+/* --- Zoom In Transition --- */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.zoomIn {
+  animation-name: zoomIn;
+}
