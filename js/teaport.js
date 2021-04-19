@@ -30,7 +30,7 @@
 	});
 
 	// Changing the Navbar Color
-	// You can switch "navbar-affix" to any background color for customiziation
+	// You can switch "navbar-affix" to any background color for customization
 	var navbarCollapse = function() {
 		if ($("#main_nav").offset().top > 100) {
 			$("#main_nav").addClass("navbar-affix");

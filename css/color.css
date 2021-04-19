@@ -147,10 +147,12 @@ a.text-light:hover, a.text-light:focus {
 /* --- Backgrounds --- */
 
 .bg-primary {
+     color: #fff;
      background-color: #2F3042 !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus, button.bg-primary:hover, button.bg-primary:focus {
+     color: #fff;
      background-color: #555677 !important;
 }
 
